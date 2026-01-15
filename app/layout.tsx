@@ -4,6 +4,7 @@ import "remixicon/fonts/remixicon.css";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LenisProvider from "@/app/providers/lenis-provider";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -27,7 +28,7 @@ export default function RootLayout({
         className={`${manrope.variable} antialiased font-sans`}
       >
         <Navbar />
-        {children}
+        <LenisProvider>{children}</LenisProvider>
         <Footer />
       </body>
     </html>
